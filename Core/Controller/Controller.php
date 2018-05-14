@@ -17,7 +17,6 @@ class Controller extends DoctrineORM {
      */
     public function __construct(){
         parent::__construct();
-        $this->helper = new \AlloHelper();
         $this->path = 'App/Views/';
         $this->repository = new Repository();
     }
