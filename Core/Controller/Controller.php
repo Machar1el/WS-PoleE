@@ -2,7 +2,6 @@
 
 namespace Core\Controller;
 require_once "vendor/autoload.php";
-require_once "Core/API/api-allocine-helper.php";
 
 use App\Model\Repository;
 

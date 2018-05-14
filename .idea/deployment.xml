@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="dentiste1">
+  <component name="PublishConfigData" serverName="Chatbot">
     <serverData>
-      <paths name="DesignPattern">
+      <paths name="Chatbot">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="dentiste1">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="projectphp">
+      <paths name="ODOld">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
