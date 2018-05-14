@@ -15,7 +15,7 @@ class SPDO
 
     const DEFAULT_SQL_PASS = '';
 
-    const DEFAULT_SQL_DTB = 'projetsecu';
+    const DEFAULT_SQL_DTB = 'ws-pole';
 
     private function __construct()
     {

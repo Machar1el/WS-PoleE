@@ -19,7 +19,7 @@ class DoctrineORM
             'driver'   => 'pdo_mysql',
             'user'     => 'root',
             'password' => '',
-            'dbname'   => 'mytek',
+            'dbname'   => 'ws-pole',
         );
         $this->entityManager = \Doctrine\ORM\EntityManager::create($databaseParams, $config);
     }
