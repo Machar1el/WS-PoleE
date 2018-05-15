@@ -8,8 +8,10 @@ use Core\Controller\Controller;
 class HomeController extends Controller
 {
     public function index() {
+        if(isset($_POST[''])) {
+        }
         $this->template = 'default';
-        $this->render('home/index');
+        $this->render('home/index', compact('var', 'toto'));
     }
 }
 
