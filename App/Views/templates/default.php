@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>MyTek</title>
+    <title>WS-PoleEmploie</title>
     <link href="<?= PATH ?>/Public/css/bootstrap.css" rel="stylesheet">
     <link href="<?= PATH ?>/Public/css/styles.css?v=<?=time();?>" rel="stylesheet">
     <script src="<?= PATH ?>/Public/js/jquery-2.2.4.js"></script>
@@ -31,6 +31,20 @@
                     <?php if(\App\Model\UserRepository::logged()): ?>
                         <li><a href="<?= PATH ?>/user/profil">Profil</a></li>
                     <?php endif ?>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pole emploie et vous <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Conseils</a></li>
+                            <li><a href="#">Vos allocations</a></li>
+                            <li><a href="#">Vos aides</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Pôle emploi et vous</a></li>
+                            <li><a href="#">Mon parcours info</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Vos services en ligne</a></li>
+                            <li><a href="#">Découvrir le marché du travail</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if(\App\Model\UserRepository::logged()): ?>
