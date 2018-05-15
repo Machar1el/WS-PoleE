@@ -9,6 +9,8 @@
     <link href="<?= PATH ?>/Public/css/styles.css?v=<?=time();?>" rel="stylesheet">
     <script src="<?= PATH ?>/Public/js/jquery-2.2.4.js"></script>
     <script src="<?= PATH ?>/Public/js/bootstrap.js"></script>
+    <script src="<?= PATH ?>/Public/js/tracking.js-master/build/tracking-min.js"></script>
+    <script src="<?= PATH ?>/Public/js/tracking.js-master/build/data/face-min.js"></script>
 </head>
 <body>
 <div class="container">
