@@ -57,7 +57,16 @@
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
-    <br >
+    <br/>
+    <div id="search">
+        <form action="<?= PATH ?>search/index" method="POST">
+            <label>Recherche vocale</label>
+            <input type="textarea" name="search" placeholder="Dîtes-moi ce que vous voulez..."/>
+            <input type="submit" value="Valider">
+        </form>
+    </div>
+    <br/>
+
     <?php echo $content; ?>
 </div>
 </body>

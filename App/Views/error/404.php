@@ -1,1 +1,1 @@
-<h3 class="center">Page non trouvé...</h3>
+<h3 class="center">Page non trouvée...</h3>

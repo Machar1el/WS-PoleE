@@ -1,5 +1,6 @@
 <h2 class="center">Page Index</h2>
 <p class="test">0</p>
+<p></p>
 <script>
     $(function(){ // you can wrap it here with in document ready block
         var test = $('.test').val();
