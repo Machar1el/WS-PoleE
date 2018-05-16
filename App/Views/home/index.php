@@ -1,4 +1,15 @@
 <h2 class="center">Page Index</h2>
+
+<br/>
+
+<div id="help-content">
+
+</div>
+
+<div id='result-content'>
+
+</div>
+
 <p class="test">0</p>
 <style>
     video, canvas {
@@ -41,25 +52,4 @@
         gui.add(tracker, 'initialScale', 1.0, 10.0).step(0.1);
         gui.add(tracker, 'stepSize', 1, 5).step(0.1);
     };
-</script>
-
-<script>
-    $(function(){ // you can wrap it here with in document ready block
-        var test = $('.test').val();
-        var test2 = 0;
-        $("body").click(function(){
-            $('.test').html(test++);
-            test2++;
-            if(test2 > 20) {
-                alert('STOP CLIC');
-                test2 = 0;
-            }
-        });
-
-        setTimeout(
-            function()
-            {
-                 test2 = 0;
-            }, 8000);
-    });
 </script>
