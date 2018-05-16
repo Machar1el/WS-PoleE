@@ -126,13 +126,13 @@
                             <li><a href="<?= PATH ?>/user/register">S'enregistrer</a></li>
                             <li><a href="<?= PATH ?>/user/login">Connexion</a></li>
                         <?php endif ?>
-                            <li><a id="help" href="<?= PATH ?>#">Aide <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+                            <li><a id="help" href="#">Aide <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <input id="level" type="hidden" value="<?= $level ?>"/>
-        <input id="url" type="hidden" value="<?= $url ?>"/>
+        <input id="level" type="hidden" value="<?= $_SESSION['level'] ?>"/>
+        <input id="url" type="hidden" value="<?= $_SESSION['url'] ?>"/>
 
         <?php echo $content; ?>
     </div>

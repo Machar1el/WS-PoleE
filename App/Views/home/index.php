@@ -17,6 +17,14 @@
         margin-top: 880px;
         position: absolute;
     }
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    #wrapper {
+        min-height: 100%;
+    }
 </style>
 <div class="demo-frame">
     <div class="demo-container">
@@ -24,9 +32,14 @@
         <canvas id="canvas" width="320" height="240"></canvas>
     </div>
 </div>
+<div id="wrapper"></div>
 
 <script>
     window.onload = function() {
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
         var video = document.getElementById('video');
         var canvas = document.getElementById('canvas');
         var context = canvas.getContext('2d');
@@ -38,7 +51,8 @@
         tracker.on('track', function(event) {
             context.clearRect(0, 0, canvas.width, canvas.height);
             event.data.forEach(function(rect) {
-                alert('Bonjour !'); die();
+                $('#image').hide('slow');
+                die();
                 context.strokeStyle = '#a64ceb';
                 context.strokeRect(rect.x, rect.y, rect.width, rect.height);
                 context.font = '11px Helvetica';

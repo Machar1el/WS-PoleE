@@ -33,17 +33,16 @@ class SearchController extends Controller {
     }
 
     private function levelZeroToOne() {
-        $url = "'" . PATH . "search/index'";
+        $url = "'" . PATH . "/search/index'";
 
         echo "
                 <div id='search'>
                     <form action=$url method='POST'>
                         <label>Recherche vocale</label>
                         <br/>
-                        <input type='text' name='search' placeholder='Dîtes-moi ce que vous voulez...'/>
+                        <input class='form-control' type='text' name='search' placeholder='Dîtes-moi ce que vous voulez...'/>
                         <br/>
-                        <br/>
-                        <a id=\"validate\" href='#'>Valider</a>
+                        <a class='btn btn-primary' id=\"validate\" href='#'>Valider</a>
                     </form>
                 </div>
             ";
