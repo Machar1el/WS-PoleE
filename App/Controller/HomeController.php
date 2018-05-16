@@ -14,7 +14,13 @@ class HomeController extends Controller
         $level = $_SESSION['level'];
         $url = $_SESSION['url'];
         $this->template = 'default';
-        $this->render('home/index', compact('level', 'url'));
+
+        $this->render('home/index');
+    }
+
+    public function accueil() {
+        $this->template = 'default';
+        $this->render('home/accueil');
     }
 
     public function search() {
