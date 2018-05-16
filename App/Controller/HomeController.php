@@ -11,7 +11,12 @@ class HomeController extends Controller
         if(isset($_POST[''])) {
         }
         $this->template = 'default';
-        $this->render('home/index', compact('var', 'toto'));
+        $this->render('home/index');
+    }
+
+    public function accueil() {
+        $this->template = 'default';
+        $this->render('home/accueil');
     }
 
     public function search() {
