@@ -7,12 +7,19 @@ use Core\Controller\Controller;
 
 class SearchController extends Controller {
     public function index() {
-        echo 'total';
         if(isset($_POST)) {
-            echo "proot";
-            var_dump($_POST);
-            $this->template = 'default';
-            $this->render('search/index', compact('_POST'));
+            echo '
+                <div id="search">
+                    <form action="<?= PATH ?>search/index" method="POST">
+                        <label>Recherche vocale</label>
+                        <br/>
+                        <input type="text" name="search" placeholder="Dîtes-moi ce que vous voulez..."/>
+                        <br/>
+                        <br/>
+                        <input type="submit" value="Valider"/>
+                    </form>
+                </div>
+            ';
         }
     }
 }
