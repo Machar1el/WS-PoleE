@@ -8,10 +8,13 @@ use Core\Controller\Controller;
 class HomeController extends Controller
 {
     public function index() {
-        if(isset($_POST[''])) {
-        }
+        $_SESSION['level'] = 0;
+        $_SESSION['level1_counter'] = 0;
+        $_SESSION['url'] = PATH . 'search/index';
+        $level = $_SESSION['level'];
+        $url = $_SESSION['url'];
         $this->template = 'default';
-        $this->render('home/index', compact('var', 'toto'));
+        $this->render('home/index', compact('level', 'url'));
     }
 
     public function search() {

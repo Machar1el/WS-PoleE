@@ -6,7 +6,7 @@ require_once 'App/Autoload.php';
 require_once 'Core/Autoload.php';
 
 define('ROOT', dirname(str_replace('\\', '/', __DIR__)));
-define('PATH', 'http://localhost/ws-pole');
+define('PATH', 'http://localhost:8888/epsi/workshop2_pole-emploi/');
 
 App\Autoloader::register();
 Core\Autoloader::register();
