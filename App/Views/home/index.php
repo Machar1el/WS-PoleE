@@ -1,7 +1,12 @@
 <h2 class="center">Page Index</h2>
 
 <br/>
+
 <div id="help-content">
+
+</div>
+
+<div id='result-content'>
 
 </div>
 

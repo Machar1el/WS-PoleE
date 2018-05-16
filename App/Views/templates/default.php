@@ -16,28 +16,7 @@
     <script src="<?= PATH ?>/Public/js/tracking.js-master/build/tracking-min.js"></script>
     <script src="<?= PATH ?>/Public/js/tracking.js-master/build/data/face-min.js"></script>
     <script>
-        $(function() {
-            var test = $('.test').val();
-            var test2 = 0;
-            $("body").click(function(){
-                $('.test').html(test++);
-                test2++;
-                if(test2 > 20) {
-                    alert('STOP CLICKING PLZZZ');
-                    test2 = 0;
-                }
-            });
-
-            setTimeout(
-                function() {
-                    test2 = 0;
-                }, 8000);
-        });
-
-        $(document).ready(function() {
-            var level = $('#level').val();
-            var url = $('#url').val();
-            $('#help').click(function() {
+        function dispachEvent(level, url) {
                 switch(level) {
                     case "0":
                         $.ajax({
@@ -47,7 +26,6 @@
                                 level: level
                             },
                             success: function (response) {
-                                alert(response);
                                 $('#help-content').html(response);
                             }
                         });
@@ -60,6 +38,46 @@
                         break;
                     default:
                 }
+        }
+
+        $(document).ready(function() {
+            var level = $('#level').val();
+            var test = $('.test').val();
+            var url = $('#url').val();
+            var test2 = 0;
+            $('#help').click(function() {
+                dispachEvent(level, url);
+            });
+            $("body").click(function(){
+                $('.test').html(test++);
+                test2++;
+                if(test2 > 20) {
+                    dispachEvent(level, url);
+                    test2 = 0;
+                }
+            });
+            setTimeout(
+                function() {
+                    test2 = 0;
+                }, 8000);
+        });
+
+        $(document).ajaxStop(function() {
+            $('#validate').click(function() {
+                var level = "1";
+                var url = $('#url').val();
+
+                $('#level').val(1);
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: {
+                        level: level
+                    },
+                    success: function (response) {
+                        $('#result-content').html(response);
+                    }
+                });
             });
         });
     </script>
@@ -107,10 +125,10 @@
                             <li><a href="<?= PATH ?>/user/register">S'enregistrer</a></li>
                             <li><a href="<?= PATH ?>/user/login">Connexion</a></li>
                         <?php endif ?>
-                            <li><a id="help" href="<?= PATH ?>#">Aide</a></li>
+                            <li><a id="help" href="<?= PATH ?>#">Aide <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
+                </div>
+            </div>
         </nav>
         <input id="level" type="hidden" value="<?= $level ?>"/>
         <input id="url" type="hidden" value="<?= $url ?>"/>

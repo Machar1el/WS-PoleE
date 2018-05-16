@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index() {
         $_SESSION['level'] = 0;
+        $_SESSION['level1_counter'] = 0;
         $_SESSION['url'] = PATH . 'search/index';
         $level = $_SESSION['level'];
         $url = $_SESSION['url'];
