@@ -1,18 +1,26 @@
-<h2 class="center">Page Index</h2>
-
-<div class="chatbox">
-  <div class="chatboxheader">Support technique</div>
+<h1 class="center">Page Index</h1>
+<br />
+<div class="alert alert-success" id="titre" style="display: none"><center><h2>Un assistant va prendre en charge votre demande, merci de patienter...</h2></center></div>
+<div class="chatbox" style="display: none">
+  <div class="chatboxheader">
+      Support technique
+  </div>
 
   <div class="chatboxMessages">
 
-    <span class="distantMessage">Bonjour, je suis Olivier du Support Pôle Emploi, en quoi puis-je vous être utile ?</span>
-    <span class="localMessage">Help me ! J'essaie de faire l'inscription initiale,
+    <span class="distantMessage" id="1" style="display: none">Bonjour, je suis Olivier du Support Pôle Emploi, en quoi puis-je vous être utile ?</span>
+    <span class="localMessage" id="2" style="display: none">Help me ! J'essaie de faire l'inscription initiale,
     mais je n'y arrive pas...</span>
-    <span class="distantMessage">Ne vous inquiétez pas %USER_LASTNAME%, ça va bien se passer ;)</span>
+    <span class="distantMessage" id="3" style="display: none">Ne vous inquiétez pas %USER_LASTNAME%, ça va bien se passer ;)</span>
+    <span class="distantMessage" id="4" style="display: none">
+        <div class="btn btn-danger" id="problem">
+            Problème non réglé
+        </div>
+    </span>
 
   </div>
   <div class="chatboxFooter">
-    <input class="chatboxInput" type="text" placeholder="Répondre..."></input>
+    <input class="chatboxInput" type="text" placeholder="Répondre...">
     <img src="https://png.icons8.com/color/260/send-letter.png" height="25px" width="25px">
   </div>
 </div>
@@ -20,14 +28,10 @@
 <br/>
 
 <div id="help-content">
-
 </div>
 
 <div id='result-content'>
-
 </div>
-
-<p class="test">0</p>
 <style>
     video, canvas {
         margin-left: 10px;

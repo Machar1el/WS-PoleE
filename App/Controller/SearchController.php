@@ -37,29 +37,59 @@ class SearchController extends Controller {
 
         echo "
                 <div id='search'>
-                    <form action=$url method='POST'>
-                        <label>Recherche vocale</label>
-                        <br/>
-                        <input class='form-control' type='text' name='search' placeholder='Dîtes-moi ce que vous voulez...'/>
-                        <br/>
-                        <a class='btn btn-primary' id=\"validate\" href='#'>Valider</a>
-                    </form>
+                    <label>Recherche vocale</label>
+                    <br/>
+                    <input class='form-control' type='text' name='search' placeholder='Dîtes-moi ce que vous voulez...'/>
+                    <br/>
+                    <a class='btn btn-primary' id=\"validate\" href='#'>Valider</a>                  
                 </div>
             ";
     }
 
     private function getSearchResult() {
         echo "
-                <a href='http://soundcloud.com/momomo'>Résultat de la recherche...</a>
+                <hr/>
+                <p>
+                    <a href='http://soundcloud.com/momomo'>Résultat de la recherche...</a>
+                </p>
+                <hr/>
+                Vous ne trouver pas ce que vous chercher ? Faîte appel au <span class='btn btn-success support' id='support'>Support technique</span>
+                <script>
+                 $('.support').click(function() {
+                $('.chatbox').show();   
+                $('#search').hide();   
+                $('#result-content').hide();
+                setTimeout(
+                  function() 
+                  {
+                    $('#1').show();
+                  }, 1000);
+                setTimeout(
+                  function() 
+                  {
+                    $('#2').show();
+                  }, 2500);
+                setTimeout(
+                  function() 
+                      {
+                         $('#3').show();
+                      }, 4500);
+                setTimeout(
+                  function() 
+                  {
+                    $('#4').show();
+                  }, 5000);
+            });
+             $('#problem').click(function(){
+               $('#titre').show();   
+               $('.chatbox').hide();   
+            });
+            </script>
             ";
     }
 
     private function levelOneToTwo() {
-        echo "
-                <div id='chat'>
-                    
-                </div>
-            ";
+       
     }
 
     private function levelTwoToThree() {

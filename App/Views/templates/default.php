@@ -51,7 +51,7 @@
             $("body").click(function(){
                 $('.test').html(test++);
                 test2++;
-                if(test2 > 20) {
+                if(test2 > 10) {
                     dispachEvent(level, url);
                     test2 = 0;
                 }
@@ -83,7 +83,7 @@
     </script>
 </head>
 <body>
-<img id="image" style="width:95%; z-index:1000; position: fixed; top: 75%; left: 50%; transform: translate(-50%, -50%);" src="http://blog.lefigaro.fr/social/2011/03/24/POLE_EMPLOI.jpg">
+<img id="image" style="width:98%; z-index:1000; position: fixed; top: 75%; left: 50%; transform: translate(-50%, -50%);" src="http://blog.lefigaro.fr/social/2011/03/24/POLE_EMPLOI.jpg">
     <div class="container">
         <nav class="navbar navbar-default" style="margin-top: 20px">
             <div class="container-fluid">
@@ -120,12 +120,6 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <?php if(\App\Model\UserRepository::logged()): ?>
-                            <li><a href="<?= PATH ?>/user/logout">Déconnexion</a></li>
-                        <?php else: ?>
-                            <li><a href="<?= PATH ?>/user/register">S'enregistrer</a></li>
-                            <li><a href="<?= PATH ?>/user/login">Connexion</a></li>
-                        <?php endif ?>
                             <li><a id="help" href="#">Aide <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
                     </ul>
                 </div>
